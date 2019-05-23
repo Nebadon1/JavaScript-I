@@ -66,7 +66,8 @@ let inventory = [ {"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year
 
 for (let i = 0; i < inventory.length; i++) {
    if(inventory[i].id ===33){
-   console.log('Car 33 is a ' + inventory[i].car_year + ' ' + inventory[i].car_make + ' ' + inventory[i].car_model +'.');
+   console.log("Challage 01")
+   console.log( 'Car 33 is a ' + inventory[i].car_year + ' ' + inventory[i].car_make + ' ' + inventory[i].car_model +'.');
    //or
    console.log( `Car 33 is a ${inventory[i].car_year} ${inventory[i].car_make} ${inventory[i].car_model}`)
    }
@@ -79,6 +80,7 @@ for (let i = 0; i < inventory.length; i++) {
 
 for (let i = 0; i < inventory.length; i++){
          if (inventory[i] === inventory[inventory.length - 1]){
+          console.log("Challage 02")
           console.log(inventory[i]);
          }
      }
@@ -94,6 +96,7 @@ for(let i = 0; i<inventory.length; i++){
   }
   
   carModels.sort();
+  console.log("Challage 03")
   console.log(carModels);
 
 
@@ -102,7 +105,25 @@ for(let i = 0; i<inventory.length; i++){
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
 let carYears = [];
-console.log();
+
+for( let i = 0; i < inventory.length; i ++){
+    if(inventory[i].car_year){
+        carYears.push(inventory[i].car_year)
+        
+    }
+}
+
+ carYears.sort(function(x, y) {
+    return x - y;
+
+  });
+  
+
+console.log("Challage 04")
+console.log(carYears);
+
+
+
 
 
 // ==== Challenge 5 ====
@@ -113,6 +134,7 @@ for (let i = 0; i < inventory.length; i++){
         oldCars.push(inventory[i])
     }
 }
+console.log("Challage 05")
 console.log(oldCars.length); 
 
 // ==== Challenge 6 ====
@@ -129,8 +151,8 @@ for(let i = 0; i <inventory.length; i++) {
       BMWAndAudi.push(inventory[i]);
     }
   }
-  
-  console.log(BMWAndAudi);
+  console.log("Challage 06")
+  console.log(JSON.stringify(BMWAndAudi));
 
   //ok done 
 
